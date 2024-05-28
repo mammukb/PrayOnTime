@@ -815,7 +815,7 @@ Services Style
   display: inline-block;
   text-align: center;
   line-height: 190px;
-  background-color: #7a6ad8;
+  background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -823,7 +823,12 @@ Services Style
 }
 
 .services .service-item .icon img {
-  max-width: 86px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  
+
+  /* max-width: 86px; */
   transition: all .2s;
 }
 
@@ -1207,6 +1212,34 @@ Team Style
   background-color: #7a6ad8;
   color: #fff;
 }
+
+
+/* 
+---------------------------------------------
+Team Style
+--------------------------------------------- 
+*/
+
+.time-content {
+  display: flex;
+  flex-direction: row;
+  align-content:  flex-end;
+  margin: 120px  50px 20px 120px ;
+  gap: 290px;
+}
+
+.time-content h4 {
+  color: #074173;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 30px;
+  font-size: xx-large;
+
+}
+
+
+
+
 
 
 /* 
@@ -1704,6 +1737,13 @@ body {
   .event_filter li {
     display: inline-block;
     margin: 0px 10px;
+  }
+
+  .time-content {
+    gap: 120px;
+    align-items: center;
+  margin: 120px  20px 50px 20px ;
+
   }
 }
 
