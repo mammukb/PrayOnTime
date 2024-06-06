@@ -9,91 +9,27 @@
 
 </head>
 <body>
-    <!-- <form action="" method="post" enctype="multipart/form-data" >
-        <table>
-            <tr>
-                <td>Name </td>
-                <td>
-                    <input type="text" name="name"  required >
-                </td>
-            </tr>
-            <tr>
-                <td>Place</td>
-                <td>
-                    <input type="text"  name="place"   required  >
-                </td>
-            </tr>
-            <tr>
-                <td>Age</td>
-                <td>
-                    <input type="number"  name="age" required  >
-                </td>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td>
-                    <label for="">Male</label>
-                    <input type="radio" name="gender"  required value="M" >  
-                    <label for="">Female</label>
-                    <input type="radio" name="gender" required value="F"  >             
-                </td>
-            </tr>
-            <tr>
-                <td>Number</td>
-                <td>
-                    <input type="text"  name="number"  required >
-                </td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <input type="email"  name="email" required >
-                </td>
-            </tr>
-            <tr>
-                <td>photo</td>
-                <td>
-                    <input type="file"   name="photo"  required  >
-                </td>
-            </tr>
-            <tr>
-                <td>Username</td>
-                <td>
-                    <input type="text"  name="username" required >
-                </td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td>
-                    <input type="password" name="password" required id=""    >
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit"  name="user_registration"  value="Register"  ></td>
-            </tr>
-        </table>
-    </form>
-   -->
+<div   class="Registration-body" >
 
-   <div  class="register-content" >
+    
+    <div  class="register-content" >
         <div  class="register-form" >
             <div id="form-head">
                 <img src="static/assets/images/moon.jpg" alt="image">
                 <h2>Signup</h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" >
-            <table>
-                
-                <tr>
-                    <td>
-                        <input type="text" name="name" placeholder="Enter Your Name"  required >
-                    </td>
-                </tr>
+                <table>
+                    
+                    <tr>
+                        <td>
+                            <input type="text" name="name" placeholder="Enter Your Name"  required >
+                        </td>
+                    </tr>
                 <tr>
                     <td>
                     <input type="text"  name="place"  placeholder="Enter Your pLace"  required  >
-
+                    
                     </td>
                 </tr>
                 
@@ -125,27 +61,27 @@
                 <tr>                
                     <td colspan="2">
                         <img src="static/assets/images/dp.png" alt="">
-                         <input type="file"  name="photo"  required  >
+                        <input type="file"  name="photo"  required  >
                     </td>
                 </tr>
-              
+                
                 <tr>
                     <td>
                         <input type="text"  placeholder="User Name" name="username" required >
-
+                        
                     </td>
                 </tr>
-               
+                
                 <tr>
                     <td>
                         <input type="password" placeholder="Password"   name="password" required id=""    >
-
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    
                     <td>
-                        <input type="submit"  name="user_registration"  value="Signup">
+                        <input type="submit" id="signup_btn"  name="user_registration"  value="Signup">
+                        <p style="margin-left: 60px; margin-top: -4px;">Already have an account? <a href="login">Login</a></p>
                     </td>
                 </tr>
             </table>
@@ -154,9 +90,11 @@
         <div>
 
         </div>
-   </div>
+        
+    </div>
+    
 
-
+</div>
     
 </body>
 </html>

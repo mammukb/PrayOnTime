@@ -1,0 +1,85 @@
+{%include 'userhead.html'%}
+
+<h1>Prayer Tracker</h1>
+  <form   method="post" id="prayerForm"  >
+    <div>
+      <label for="fajr">Fajr:</label>
+      <select id="fajr" name="fajr" >
+        <option value="">Select</option>
+        <option value="ontime">On Time</option>
+        <option value="late">Late</option>
+        <option value="missed">Missed</option>
+       
+      </select>
+      <label for="">With Imam</label>
+      <input type= "checkbox"  id="fajrimam"   >
+      
+    </div>
+    <div>
+      <label for="dhuhr">Dhuhr:</label>
+      <select id="dhuhr" name="dhuhr">
+        <option value="">Select</option>
+        <option value="ontime">On Time</option>
+        <option value="late">Late</option>
+        <option value="missed">Missed</option>   
+      </select>
+      <label for="">With Imam</label>
+      <input type= "checkbox"  id="dhuhrimam"  >
+      
+    </div>
+    <div>
+      <label for="asr">Asr:</label>
+      <select id="asr" name="asr" >
+        <option value="">Select</option>
+        <option value="ontime">On Time</option>
+        <option value="late">Late</option>
+        <option value="missed">Missed</option>
+       
+      </select>
+      <label for="">With Imam</label>
+      <input type= "checkbox"  id="asrimam"  >
+     
+    </div>
+    <div>
+      <label for="maghrib">Maghrib:</label>
+      <select id="maghrib" name="maghrib" >
+        <option value="">Select</option>
+        <option value="ontime">On Time</option>
+        <option value="late">Late</option>
+        <option value="missed">Missed</option>
+        
+      </select>
+      <label for="">With Imam</label>
+      <input type= "checkbox"  id="maghribimam"  >
+      
+    </div>
+    <div>
+      <label for="isha">Isha:</label>
+      <select id="isha" name="isha" >
+        <option value="">Select</option>
+        <option value="ontime">On Time</option>
+        <option value="late">Late</option>
+        <option value="missed">Missed</option>
+       
+      </select>
+      <label for="">With Imam</label>
+      <input type= "checkbox"  id="ishaimam"  >
+      
+    </div>
+    <!-- <button    type="submit"> Submit   </button> -->
+    <input type="submit"   id="submit"     >
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%include 'userfooter.html'%}

@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action=""  method="post"  >
-        <input type="text"   name="uname" placeholder="usernmae" >
-        <input type="password"  placeholder="password" name="pwd"   >
-        <input type="submit"  name="login"  value="Login"  >
+    <link rel="stylesheet" href="static/assets/css/global.css">
 
-    </form>
+
+    <title>login</title>
+</head>
+<body  class="login-body"  >
+    <div class="login-form"   >
+        <form action=""  method="post"  >
+            <h2 style="margin-left: 80px; color: blue; font-weight: 800; font-size: 38px; margin-top: -10x; "  >LOGIN</h2>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text"   name="uname" placeholder="usernmae" >
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="password"  placeholder="password" name="pwd"   >
+                    </td>
+                </tr>
+                <tr  class="error_message" style="color: red;   " >
+                    {% if messages %}
+                    {% for message in messages %}
+                        <!-- <tr class="{{ message.tags }}"> -->
+                            <td>{{ message }}</td>                 
+                    {% endfor %}
+                {% endif %}
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit"  id="login_btn" name="login"  value="Login"  >
+                        <p style="margin-left: 40px; margin-top: -4px;">Don't have an account? <a href="register">Register</a></p>
+
+                    </td>
+                </tr>
+            </table>
+    
+        </form>
+    </div>
+    
     
 </body>
 </html>

@@ -1,8 +1,9 @@
-from pyexpat.errors import messages
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from prayapp.models import*
-from django.contrib.auth import authenticate, login as auth_login
+import json
+from django.utils import timezone
 
 # Create your views here.
 
@@ -17,18 +18,18 @@ def login(request):
                 print(uname, pwd)
                 l=Login.objects.all()
                 q=l.filter(username=uname, password=pwd)
-                count = q.count()
-                
-
-
-                if count == 1:
-                         user =q.first()
-                         request.session['username'] =user.username
-                        #  return HttpResponse("<script> alert('Login Suceess'); window.location='/userhome' ;  </script>")
+               
+                if q.exists():
+                         user =l.get(username=uname,password=pwd)
+                         uid = User.objects.get(login_id=user.pk)
+                         request.session['uid'] =uid.pk
+                         request.session['login_id'] =user.pk
+                         print(request.session['uid'])
                          return redirect('userhome')
                 else:
                         messages.error(request,"Invalid username or password")
-                        return HttpResponse("<script> alert('User doesnot exist'); window.location='/login' ;  </script>")
+                        # return HttpResponse("<script> alert('User doesnot exist'); window.location='/login' ;  </script>")
+                        return redirect('login')
         else:
                 return render(request, "login.html")
 
@@ -39,6 +40,7 @@ def login(request):
 
 
 def registration(request):
+        
         if request.method == "POST":
                 name = request.POST.get("name")
                 place = request.POST.get("place")
@@ -69,4 +71,34 @@ def registration(request):
 
 
 def userhome(request):
+        print("Welcome")
+        if request.method == "POST":   
+                      data = json.loads(request.body)
+                      print(data)
+                      print(data.items())
+                      i = 1
+                      lid = request.session['login_id'] 
+                      uid = User.objects.get(login_id=lid)
+                      user_id = uid.pk
+                     
+                     
+                                        
+                      for prayer,times in data.items():
+                        #    p = Prayer.objects.get(name = prayer) #p = Prayer.objects.get(name = prayer)
+                           p = Prayer.objects.get(name = prayer)
+                           print(p)
+                           print(prayer,times)
+                           q = Prayer_marking(user=uid,prayer=p,date=timezone.now().date(), ontime=times['ontime'],aftertime=times['late'],with_imam=times['withImam'],missed=times['missed'])
+                           print (q) 
+                           q.save()
+                        # print (fajr,fajr_imam,dhuhr,dhuhr_imam,asr,asr_imam,maghrib, maghrib_imam,isha,isha_imam)
+
         return render(request, "userhome.html")
+                
+
+
+
+
+
+
+     

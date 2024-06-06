@@ -1,21 +1,29 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #7a6ad8;
-    position: absolute;
+    /* background-color: #7a6ad8; */
+ 
+    /* position: absolute; */
 }
 
 /* registration.html */
 
+.Registration-body {
+    background-image: url("../images/mosque.jpg");
+    
+}
+
 
 .register-content {
+    /* position: fixed; */
     background-color: white;  
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-top: 12%;
-    width: 800px;
-    height: 520px;
+    /* position: relative; */
+    /* top: 50%; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+    width: 400px;
+    height: 610px;
     border-radius: 3%;
 }
 
@@ -37,23 +45,31 @@ body {
     padding: 8px;
     background-color: azure;
     /* border-radius: 5px; */
-
-
     color: black;
     font-style: italic;
 }
 .register-form table input[type ="radio"]{
     width: 10%;
     margin: 2px;
-
 }
 
+#signup_btn {
+    width: 120px;
+    height: 40px;
+    margin-left: 100px;
+  
+    color: white;
+    border-radius: 10%;
+    background-color: rgb(12, 12, 130);
+    font-size: 15px; 
+}
 
 
 
 td img {
     width: 50px;
     height: 50px;
+    margin: 0 0 0 30px;
    
 }
 
@@ -81,3 +97,62 @@ td img {
     border-radius: 50%;
     
 }
+
+
+/* login.html */
+
+.login-body {
+    background-image: url("../images/praY3.avif");
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+
+.login-form {
+    background-color: white;
+    width: 300px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+    padding: 18px;
+    border-radius: 8%;
+    box-shadow: rgba(64, 65, 65, 0.997) 6px 2px 8px 0px;
+
+}
+
+
+.login-form  form  input{
+    margin: 10px 40px ;
+    width: 200px;
+    padding: 8px;
+    background-color: azure;
+    /* border-radius: 5px; */
+    color: black;
+    font-style: italic;
+}
+
+#login_btn {
+    width: 120px;
+    height: 40px;
+    margin-left: 80px;  
+    color: white;
+    border-radius: 10%;
+    background-color: rgb(12, 12, 130);
+    font-size: 15px; 
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .login-body {
+        background-image: none;
+        background-color: #7a6ad8; 
+    }
+
+
+
+
+}
+
